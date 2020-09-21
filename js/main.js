@@ -1,12 +1,14 @@
 
 
 
+
+
 async function raditNoliktavasDatus(tipsAtlase)
 {
     //raditNoliktavasDatus('aprikojums');  
     //raditNoliktavasDatus('viela');
 
-  let datiNoServera = await fetch('json/noliktava.json');
+  let datiNoServera = await fetch('https://armandspucs.github.io/klus2/json/noliktava.json'); //hostējam gihub lai lokāli var testēt
   let datiJson = await datiNoServera.json();
 
   let datiNoliktava = datiJson['noliktava'];
