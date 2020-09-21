@@ -6,7 +6,7 @@ async function raditNoliktavasDatus(tipsAtlase)
     //raditNoliktavasDatus('aprikojums');  
     //raditNoliktavasDatus('viela');
 
-  let datiNoServera = await fetch('../json/noliktava.json');
+  let datiNoServera = await fetch('json/noliktava.json');
   let datiJson = await datiNoServera.json();
 
   let datiNoliktava = datiJson['noliktava'];
