@@ -1,1 +1,1 @@
-# klus2
+# Ķīmijas laboratorijas uzskaites sistēma
