@@ -4,7 +4,7 @@ body
 	font-family: 'Ubuntu';
 	font-weight:300;
 	font-size:13px;
-	background:url(../img/bg_1.jpg);
+	background:black;
 	background-position:center -120px;
 }
 
@@ -20,6 +20,7 @@ strong, b
 	font-weight:900;
 	font-size:13px;
 	color:#545454;
+	background:black;
 }
 
 
