@@ -5,6 +5,9 @@
   padding: 120px 80px 0;
 }
 
+.front_page .button { font-size: 20px; }
+.front_page .buttons .button:not(:first-of-type) { margin-left: 16px; }
+
 .front_page_left {
   background: linear-gradient(180deg, var(--blue) 0%, var(--cyan) 100%);
   width: 40%;
