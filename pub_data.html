@@ -28,37 +28,37 @@
     </header>
 
     <div class="content">
-
-
-      <div class="buttons">
-        <a class="button" onclick="raditNoliktavasDatus()">Atlasīt visu</a>
-        <a class="button" onclick="raditNoliktavasDatus('viela')">Atlasīt vielas</a>
-        <a class="button" onclick="raditNoliktavasDatus('aprikojums')">Atlasīt aprīkojumu</a>
-      </div>
-
-      <table id="pub_data">
-        <thead>
+      <div class="content_wrapper">
+        <div class="table_filter">
+          <span class="table_filter_label">Rādīt:</span>
+          <div class="buttons">
+            <a class="button active">Visu</a>
+            <a class="button" data-filter="viela">Vielas</a>
+            <a class="button" data-filter="aprikojums">Aprīkojumu</a>
+          </div>
+        </div>
+        <table id="pub_data">
+          <thead>
             <tr>
-                <th>ID</th>
-                <th>Nosaukums</th>
-                <th>Tips</th>
-                <th>Apakštips</th>
-                <th>Skaits</th>
-                <th>Svars</th>
-                <th>Komentāri</th>
+              <th>ID</th>
+              <th>Nosaukums</th>
+              <th>Tips</th>
+              <th>Apakštips</th>
+              <th>Skaits</th>
+              <th>Svars</th>
+              <th>Komentāri</th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
             <tr class="">
-                <td></td>
-                <td>Ieraksti ielādējas...</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+              <td></td>
+              <td>Ieraksti ielādējas...</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
             </tr>
-
             <!-- tabulas rindas paraugs -->
             <!--
             <tr class="aprikojums"> class=viela
@@ -70,22 +70,14 @@
                 <td>&nbsp;</td>
                 <td>Daži komentāri</td>
             </tr>-->
-            <tbody>
-    </table>
-
-  </div><!--beidzas class=content-->
-
-  <div class="footer">
-    <a href="kluda.html" class="button button_error report_error">Ziņot par kļūdu</a>
-  </div>
+          <tbody>
+        </table>
+      </div>
+    </div><!--beidzas class=content-->
 
     <script src='js/main.js'></script>
     <script>
-    raditNoliktavasDatus(); 
+      raditNoliktavasDatus();
     </script>
-
-
-
-    
   </body>
 </html>
