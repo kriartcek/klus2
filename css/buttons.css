@@ -5,7 +5,6 @@
   background: none;
   border: 1px solid var(--blue);
   color: var(--blue);
-  font-size: 20px;
 }
 
 .button:hover {
@@ -34,4 +33,4 @@
   align-items: center;
 }
 
-.buttons .button:not(:first-of-type) { margin-left: 16px;}
+.buttons .button:not(:first-of-type) { margin-left: 8px; }
