@@ -14,6 +14,8 @@
   })
 })();
 
+
+
 async function raditNoliktavasDatus(tipsAtlase)
 {
     //raditNoliktavasDatus('aprikojums');
@@ -33,7 +35,6 @@ async function raditNoliktavasDatus(tipsAtlase)
 
   for (i = 0; i < datiNoliktava.length; i++)
   {
-    //i - loop indekss 0,1,2,3,4....
 
       tipsClass = datiNoliktava[i]['Tips'];
       tipsClass = tipsClass.toLowerCase();
