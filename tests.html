@@ -1,0 +1,12 @@
+<html>
+    <body>
+
+<script>
+let datiNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/inventars'); 
+let datiJson = await datiNoServera.json(); 
+
+console.log(datiJson);
+</script>
+
+    </body>
+</html>
