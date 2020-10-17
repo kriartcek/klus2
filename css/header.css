@@ -17,8 +17,17 @@ header .content_wrapper {
 
 header .logo {
   height: 40px;
-  display: block;
+  display: flex;
+  align-items: center;
 }
+
+header .logo span {
+  margin-left: 8px;
+  font-size: 22px;
+  color: var(--blue);
+}
+
+header .logo span:hover { color: var(--blue-dark); }
 
 header nav a {
   color: var(--neutral-600);
