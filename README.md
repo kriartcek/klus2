@@ -1,4 +1,4 @@
-# Ķīmijas laboratorijas uzskaites sistēma
+# Ķīmijas laboratorijas uzskaites sistēma.
 Frontend (HTML,CSS,JS) kas veidots "StartIT" fonda kursu ietvaros.
 
 Wireframe ko augustā zīmējām 
