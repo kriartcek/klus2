@@ -1,5 +1,5 @@
 # Ķīmijas laboratorijas uzskaites sistēma.
-Frontend (HTML,CSS,JS) kas veidots "StartIT" fonda kursu ietvaros.
+Frontend (HTML,CSS) kas veidots "StartIT" fonda kursu ietvaros.
 
 Wireframe ko augustā zīmējām 
 https://docs.google.com/drawings/d/1SD0BlwuWukdRMusgcn8t4_pBQXGCnXCO-RlniyZnS4s/edit?usp=sharing
