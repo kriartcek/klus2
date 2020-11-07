@@ -19,24 +19,38 @@
 
 
 
+async function iegutDatusNoApi(url)
+{
+  let datiNoServera = await fetch(url);
+  let datiJson = await datiNoServera.json();
+  return datiJson;
+}
+//funkciju var izsaukt šādi
+//let datiJson = await iegutDatusNoApi('https://armandspucs.github.io/majas-darbs-1/data/datoruDB.json');
 
 
+//ar šo funkciju var pamēģināt notestēt vai darbojas iepriekšējā funkcija iegutDatusNoApi()
+async function testIegutDatusNoApi()
+{
+  let datiJson = await iegutDatusNoApi('https://armandspucs.github.io/majas-darbs-1/data/datoruDB.json');
+
+  console.log(datiJson);
+}
 
 
+/*
 async function iegutVielasNoServera()
 {
   let datiNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
   let datiJson = await datiNoServera.json();
   return datiJson;
 }
-
-
 async function iegutInventaruNoServera()
 {
   let datiNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/inventars'); 
   let datiJson = await datiNoServera.json();
   return datiJson;
-}
+}*/
 
 
 
@@ -56,16 +70,16 @@ async function raditNoliktavasDatus(tipsAtlase)
 
   if(tipsAtlase==undefined)
   {
-    jsonVielas = await iegutVielasNoServera();
-    jsonInventars = await iegutInventaruNoServera();
+    jsonVielas = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
+    jsonInventars = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
   }
   else if(tipsAtlase=='viela')
   {
-    jsonVielas = await iegutVielasNoServera();
+    jsonVielas = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
   }
   else if(tipsAtlase=='aprikojums')
   {
-    jsonInventars = await iegutInventaruNoServera();
+    jsonInventars = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
   }
 
 
