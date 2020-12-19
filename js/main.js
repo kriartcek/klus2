@@ -1,6 +1,6 @@
 
 
-
+//meklēšanas pogu funkcionalitāte
 (function() {
   let table_filter_buttons = document.querySelectorAll('.table_filter .button')
 
@@ -36,25 +36,6 @@ async function testIegutDatusNoApi()
 
   console.log(datiJson);
 }
-
-
-/*
-async function iegutVielasNoServera()
-{
-  let datiNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
-  let datiJson = await datiNoServera.json();
-  return datiJson;
-}
-async function iegutInventaruNoServera()
-{
-  let datiNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/inventars'); 
-  let datiJson = await datiNoServera.json();
-  return datiJson;
-}*/
-
-
-
-
 
 
 async function raditNoliktavasDatus(tipsAtlase)
