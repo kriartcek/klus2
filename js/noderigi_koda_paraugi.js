@@ -25,6 +25,62 @@ async function testIegutDatusNoApi()
 
 
 
+//funkcija kas izmanto augstāk esošo iegutDatusNoApi()
+//lai iegūtu datus no diviem api un apvienotu vienā tabulā
+async function raditNoliktavasDatus(tipsAtlase)
+{
+ 
+  let jsonVielas = Array();
+  let jsonInventars = Array();
+
+  if(tipsAtlase==undefined)
+  {
+    jsonVielas = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
+    jsonInventars = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
+  }
+  else if(tipsAtlase=='viela')
+  {
+    jsonVielas = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
+  }
+  else if(tipsAtlase=='aprikojums')
+  {
+    jsonInventars = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
+  }
+
+
+  let datiNoliktava = jsonVielas.concat(jsonInventars);
+  console.log(datiNoliktava);
+
+  let tabula = document.querySelector('#pub_data tbody');
+  tabula.innerHTML = '';
+
+
+  for (i = 0; i < datiNoliktava.length; i++)
+  {
+
+      tipsClass = datiNoliktava[i]['tips'];
+
+      tabula.innerHTML = tabula.innerHTML+`
+      <tr class="`+tipsClass+`">
+      <td> `+datiNoliktava[i]['id']+` </td>
+      <td> `+datiNoliktava[i]['nosaukums']+` </td>
+      <td> `+datiNoliktava[i]['tips']+` </td>
+      <td> `+datiNoliktava[i]['apakstips']+` </td>
+      <td> `+datiNoliktava[i]['skaits']+` </td>
+      <td> `+datiNoliktava[i]['daudzums']+` </td>
+      <td> `+datiNoliktava[i]['komentari']+` </td>
+      </tr>`;
+      
+
+
+  }//loop beigas
+  
+
+
+}//beidzas raditNoliktavasDatus(dati)
+
+
+
 
 
 

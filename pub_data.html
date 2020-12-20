@@ -33,9 +33,9 @@
         <div class="table_filter">
           <span class="table_filter_label">Rādīt:</span>
           <div class="buttons">
-            <a class="button active">Visu</a>
-            <a class="button" data-filter="viela">Vielas</a>
-            <a class="button" data-filter="aprikojums">Aprīkojumu</a>
+            <a class="button" onclick="raditNoliktavasDatus(this.dataset.filter)">Visu</a>
+            <a class="button" data-filter="viela" onclick="raditNoliktavasDatus(this.dataset.filter)">Vielas</a>
+            <a class="button" data-filter="aprikojums"  onclick="raditNoliktavasDatus(this.dataset.filter)">Aprīkojumu</a>
           </div>
         </div>
         <table id="pub_data">

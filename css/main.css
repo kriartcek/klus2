@@ -38,9 +38,64 @@ img {
   max-height: 100%;
 }
 
+
+.alignLeft
+{
+  text-align:left;
+}
+.alignRight
+{
+  text-align:right;
+}
+
 .content { padding: 70px 20px; }
 
 .content_wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+
+
+
+
+
+.flex3 {
+  display: flex;
+  flex-wrap:wrap; /*nowrap;*/
+  justify-content: center;
+  gap:10px;
+}
+.flex3 div
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  flex:1;
+  padding:5px;
+}
+
+
+
+
+.flex4 {
+  display: flex;
+  flex-wrap:wrap; /*nowrap;*/
+  justify-content: center;
+  gap:10px;
+}
+.flex4 div
+{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  /*also a flex container (for vertical equal height)*/
+  background:whitesmoke;
+  border-radius: 10px;
+  flex:1;
+  text-align:center;
+  padding:5px;
+  height:100px;
+  margin:10px;
 }
