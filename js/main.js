@@ -66,3 +66,48 @@ async function raditNoliktavasDatus(tipsAtlase)
 
 }//beidzas raditNoliktavasDatus(dati)
 
+
+
+
+
+
+
+
+async function pievienotVieluAprikojumu()
+{
+
+let requestBodyJson = {
+              "apakstips": "test2",
+              "daudzums": 5,
+              "komentari": "Šķīdums izvedots un sapildīts lorem ipsum",
+              "mervienibas": "ml",
+              "nosaukums": "Nosaukums lorem ipsum",
+              "skaits": 4,
+              "tips": "reaģents"
+              };
+let requestBodyString = JSON.stringify(requestBodyJson);
+
+
+let request = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/viela',
+         		{
+            method:"POST",
+  					headers:{
+                  'X-API-KEY': 'asdf',
+                  'Content-Type': 'application/json'
+                  },
+            body:requestBodyString
+        		})
+
+let atbilde = await request.json();
+console.log(atbilde);
+
+  //.then(res=>res.json())
+  //.then(json=>console.log(json))
+  
+}
+
+
+//pievienotVieluAprikojumu();
+
+
+

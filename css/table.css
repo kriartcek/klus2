@@ -41,7 +41,6 @@ tbody tr:not(:last-of-type) { border-bottom: 5px solid var(--neutral-50); }
 
 .table_filter {
   margin-bottom: 20px;
-  text-align: right;
 }
 
 .table_filter_label {

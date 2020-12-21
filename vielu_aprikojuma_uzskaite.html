@@ -19,10 +19,10 @@
           <span>ĶLUS</span>
         </a>
         <nav>
-          <a href="pub_data.html" class="active">Uzskaite</a>
-          <a href="#">Iepirkumi</a>
-          <a href="#">Rīkojumi</a>
-          <a href="#">Lietotāji</a>
+          <a href="vielu_aprikojuma_uzskaite.html" class="active">Uzskaite</a>
+          <a href="iepirkumi.html">Iepirkumi</a>
+          <a href="rikojumi.html">Rīkojumi</a>
+          <a href="lietotaji.html">Lietotāji</a>
           <a href="index.html">Iziet</a>
         </nav>
       </div>
@@ -30,14 +30,24 @@
 
     <div class="content">
       <div class="content_wrapper">
-        <div class="table_filter">
-          <span class="table_filter_label">Rādīt:</span>
-          <div class="buttons">
-            <a class="button" onclick="raditNoliktavasDatus(this.dataset.filter)">Visu</a>
-            <a class="button" data-filter="viela" onclick="raditNoliktavasDatus(this.dataset.filter)">Vielas</a>
-            <a class="button" data-filter="aprikojums"  onclick="raditNoliktavasDatus(this.dataset.filter)">Aprīkojumu</a>
-          </div>
+
+        <div class="flex3">
+            <div class="table_filter">
+                <span class="table_filter_label">Rādīt:</span>
+                <a class="button" onclick="raditNoliktavasDatus(this.dataset.filter)">Visu</a>
+                <a class="button" data-filter="viela" onclick="raditNoliktavasDatus(this.dataset.filter)">Vielas</a>
+                <a class="button" data-filter="aprikojums"  onclick="raditNoliktavasDatus(this.dataset.filter)">Aprīkojumu</a>
+            </div>
+            <div class="alignRight">
+                <a class="button" href="pievienot_vielu_aprikojumu.html">Pievienot ierakstu</a>
+            </div>
         </div>
+        
+        
+
+
+        
+
         <table id="pub_data">
           <thead>
             <tr>

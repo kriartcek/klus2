@@ -3,6 +3,31 @@
 
 
 
+
+//meklēšanas pogu funkcionalitāte
+//ieslēdz vizuāli aktīvo pogu un izslēdz pārējās
+(function() {
+    let table_filter_buttons = document.querySelectorAll('.table_filter .button')
+  
+    table_filter_buttons.forEach(function(currentIndex){
+      currentIndex.onclick = function(){
+        var btn = 0
+        while(btn < table_filter_buttons.length){
+          table_filter_buttons[btn++].classList.remove('active')
+        }
+  
+        this.classList.add('active')
+        raditNoliktavasDatus(this.dataset.filter)
+      }
+    })
+  })();
+
+
+
+
+
+
+
 //atsevišķa funkcija kas veic tikai fetch
 //noderīgi lai atdalītu fetch funkcionalitāti no pārējām funkcijām
 async function iegutDatusNoApi(url)

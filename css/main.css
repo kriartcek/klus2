@@ -39,6 +39,12 @@ img {
 }
 
 
+form
+{
+  white-space: pre;
+}
+
+
 .alignLeft
 {
   text-align:left;
@@ -68,7 +74,6 @@ img {
 }
 .flex3 div
 {
-  display:flex;
   flex-direction:column;
   justify-content:center;
   flex:1;
