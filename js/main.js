@@ -56,6 +56,7 @@ async function raditNoliktavasDatus(tipsAtlase)
       <td> `+datiNoliktava[i]['skaits']+` </td>
       <td> `+datiNoliktava[i]['daudzums']+` </td>
       <td> `+datiNoliktava[i]['komentari']+` </td>
+      <td onclick="dzestVieluAprikojumu(`+datiNoliktava[i]['id']+`)"> ❌ </td>
       </tr>`;
       
 
@@ -73,17 +74,18 @@ async function raditNoliktavasDatus(tipsAtlase)
 
 
 
+
 async function pievienotVieluAprikojumu()
 {
 
 let requestBodyJson = {
-              "apakstips": "test2",
-              "daudzums": 5,
-              "komentari": "Šķīdums izvedots un sapildīts lorem ipsum",
-              "mervienibas": "ml",
-              "nosaukums": "Nosaukums lorem ipsum",
-              "skaits": 4,
-              "tips": "reaģents"
+              "apakstips": document.querySelector('#apakstips').value,
+              "daudzums": parseInt(document.querySelector('#daudzums').value),
+              "komentari": document.querySelector('#komentari').value,
+              "mervienibas": document.querySelector('#mervienibas').value,
+              "nosaukums": document.querySelector('#nosaukums').value,
+              "skaits": parseInt(document.querySelector('#skaits').value),
+              "tips": document.querySelector('#tips').value
               };
 let requestBodyString = JSON.stringify(requestBodyJson);
 
@@ -91,23 +93,44 @@ let requestBodyString = JSON.stringify(requestBodyJson);
 let request = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/viela',
          		{
             method:"POST",
-  					headers:{
-                  'X-API-KEY': 'asdf',
-                  'Content-Type': 'application/json'
-                  },
+  					headers:
+  					{
+            'X-API-KEY': 'asdf',
+            'Content-Type': 'application/json'
+            },
             body:requestBodyString
-        		})
+        		});
 
 let atbilde = await request.json();
-console.log(atbilde);
+//console.log(atbilde);
+  
+document.querySelector('#atbilde').innerHTML=JSON.stringify(atbilde);
+  
+}//beigas pievienotVieluAprikojumu();
 
-  //.then(res=>res.json())
-  //.then(json=>console.log(json))
+
+
+
+
+
+
+async function dzestVieluAprikojumu(id)
+{
+
+  
+  if (confirm('Dzēst?')) 
+  {
+    let request = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/viela/'+id+'/dzest',
+                {
+                method:"POST",
+                headers: {
+                'X-API-KEY': 'asdf',
+                'Content-Type': 'application/json'
+                }
+            });
+    
+      let atbilde = await request.json();
+			alert('Atbilde no servera: '+atbilde);
+	}
   
 }
-
-
-//pievienotVieluAprikojumu();
-
-
-

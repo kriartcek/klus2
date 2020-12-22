@@ -31,17 +31,12 @@
     <div class="content">
       <div class="content_wrapper">
 
-        <div class="flex3">
-            <div>
-                <a class="button" href="vielu_aprikojuma_uzskaite.html">&lt; Atpakaļ uz sarakstu</a>
-            </div>
-        </div>
-        
+        <a class="button" href="vielu_aprikojuma_uzskaite.html">&lt; Atpakaļ uz sarakstu</a>
+
 
         <form>
-        ID <input id="id" />
         
-        Nosaukums <input type="number" id="nosaukums" />
+        Nosaukums <input id="nosaukums" />
         
         Tips <select id="tips">
             <option value="reaģents">reaģents</option>
@@ -50,23 +45,34 @@
             <option value="trauks">trauks</option>
             </select>
         
-        Apakštips <select id="tips">
-            <option value="reaģents">reaģents</option>
-            <option value="svari">svari</option>
-            <option value="sildītājs">sildītājs</option>
-            <option value="trauks">trauks</option>
+        Apakštips <select id="apakstips">
+            <option value="sāls">sāls</option>
+            <option value="hidroksīds">hidroksīds</option>
+            <option value="skābe">skābe</option>
+            <option value="mehāniskie svari">mehāniskie svari</option>
+            <option value="elektroniskie svari">elektroniskie svari</option>
+            <option value="plītiņa">plītiņa</option>
+            <option value="trauki">trauki</option>
+            <option value="stikls">stikls</option>
             </select>
         
         Mērvienibas <input id="mervienibas" />
 
-        Daudzums <input type="number" id="daudzums" />
+        Svars/daudzums <input type="number" id="daudzums" />
+
+        Skaits <input type="number" id="skaits" />
         
         Komentāri <textarea id="komentari"></textarea>
 
-        <a class="button" onclick="#">Saglabāt</a>
+        <a class="button" onclick="pievienotVieluAprikojumu()">Saglabāt</a>
         </form>
 
-      </div>
+        
+        <hr />
+        Atbilde no servera: <span id="atbilde"></span>
+                
+
+      </div><!--beidzas class=content_wrapper-->
     </div><!--beidzas class=content-->
 
     <script src='js/main.js'></script>
