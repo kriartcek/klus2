@@ -11,25 +11,22 @@ async function raditNoliktavasDatus(tipsAtlase)
   {
     let vielasNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
     jsonVielas = await vielasNoServera.json();
-    jsonVielas = pievienotIerakstuParKategoriju(jsonVielas, 'viela');
     //
     let inventarsNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
     jsonInventars = await inventarsNoServera.json();
-    jsonInventars = pievienotIerakstuParKategoriju(jsonInventars, 'inventars');
   }
   else if(tipsAtlase=='viela')
   {
     //jsonVielas = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
     let vielasNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/vielas');
     jsonVielas = await vielasNoServera.json();
-    jsonVielas = pievienotIerakstuParKategoriju(jsonVielas, 'viela');
   }
   else if(tipsAtlase=='aprikojums')
   {
     //jsonInventars = await iegutDatusNoApi('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
     let inventarsNoServera = await fetch('https://pytonc.eu.pythonanywhere.com/api/v1/inventars');
     jsonInventars = await inventarsNoServera.json();
-    jsonInventars = pievienotIerakstuParKategoriju(jsonInventars, 'inventars');
+
   }
 
 
@@ -67,6 +64,10 @@ async function raditNoliktavasDatus(tipsAtlase)
 
 
 }//beidzas raditNoliktavasDatus(dati)
+
+
+
+
 
 
 
