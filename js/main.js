@@ -74,6 +74,19 @@ async function raditNoliktavasDatus(tipsAtlase)
 
 
 
+function pievienotIerakstuParKategoriju(json, tips)
+{
+  for (i = 0; i < json.length; i++)
+  {
+    json[i]['kategorija']=tips;
+  }
+
+  return json;
+}
+
+
+
+
 
 
 
@@ -116,15 +129,7 @@ document.querySelector('#atbilde').innerHTML=JSON.stringify(atbilde);
 
 
 
-function pievienotIerakstuParKategoriju(json, tips)
-{
-  for (i = 0; i < json.length; i++)
-  {
-    json[i]['kategorija']=tips;
-  }
 
-  return json;
-}
 
 
 
